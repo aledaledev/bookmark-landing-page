@@ -1,0 +1,98 @@
+@use "../variables" as *;
+@use "../helpers" as *;
+@use "../mixins" as *;
+.contact {
+    background-color: $soft-blue;
+    padding: 3.8rem 2rem 3.6rem;
+    p {
+      @include spacing-transform(0.3rem, uppercase);
+      @include font(0.7rem, 500, white);
+      text-align: center;
+      margin: 1rem 0 0.9rem;
+    }
+    h3 {
+      @include font(1.5rem, 500, white);
+      @include aling-height(center, 1.2);
+
+      max-width: 23rem;
+      margin: 0 auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .input-email {
+        width: 100%;
+        max-width: 22rem;
+        .email {
+          width: 100%;
+          padding: 1rem 1.4rem;
+          margin: 2rem 0 0;
+          border: none;
+          border-radius: 0.2rem;
+          color: $very-dark-blue;
+          font-size: 0.9rem;
+          &::placeholder {
+            font-size: 14px;
+            color: $grayish-blue;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .warning {
+          margin: 2rem auto 0;
+          border-radius: 0.2rem 0.2rem 0 0;
+          border: 2px solid $soft-red;
+
+          background-image: url("../assets/images/icon-error.svg");
+          background-repeat: no-repeat;
+          background-position: 95%;
+        }
+        .warning-email {
+          p {
+            @include spacing-transform(normal, none);
+            margin: 0;
+            padding: 0.4rem;
+            font-style: italic;
+            text-align: left;
+            font-size: 0.65rem;
+          }
+          background-color: $soft-red;
+          border-radius: 0 0 0.4rem 0.4rem;
+        }
+      }
+      .submit {
+        width: 100%;
+        max-width: 22rem;
+        margin-top: 1.2rem;
+        background-color: $soft-red;
+        color: white;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      padding: 3rem 2rem;
+      h3 {
+        font-size: 1.8rem;
+        max-width: 24rem;
+      }
+      form {
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 1rem;
+        margin-top: 2rem;
+        .input-email {
+          width: auto;
+          .email {
+            margin: 0;
+            width: max-content;
+          }
+        }
+        .submit {
+          margin: 0;
+          width: max-content;
+        }
+      }
+    }
+  }

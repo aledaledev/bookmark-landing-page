@@ -1,0 +1,55 @@
+@use "../helpers" as *;
+@use "../variables" as *;
+.header {
+  @extend %flex-center-between;
+  height: 7.4rem;
+  margin: 0 2.2rem;
+  a {
+    img {
+      width: 1.15rem;
+    }
+  }
+  .principal-nav {
+    display: none;
+    ul {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    > a {
+      display: none;
+    }
+    .principal-nav {
+      display: block;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 2.75rem;
+        a {
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+        }
+        button {
+          background-color: $soft-red;
+          color: white;
+          padding: 0.8rem 2rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 55rem;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1366px) {
+    width: 70rem;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,45 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+footer {
+    background-color: $very-dark-blue;
+    padding: 2.7rem;
+    text-align: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.9rem;
+      li {
+        > img {
+          width: 10rem;
+          margin-bottom: 0.5rem;
+        }
+        a {
+          @include spacing-transform(0.1rem, uppercase);
+          color: white;
+          font-size: 15px;
+        }
+      }
+      .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 2.5rem;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      ul {
+        flex-direction: row;
+        align-items: center;
+        li {
+          > img {
+            margin: 0;
+          }
+        }
+        .social-media {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  }

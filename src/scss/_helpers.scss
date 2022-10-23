@@ -1,0 +1,23 @@
+@use './variables' as *;
+@use './mixins' as *;
+%flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%h2{
+  @include font(1.5rem,500,$very-dark-blue);
+  text-align: center;
+}
+%p-description{
+  @include aling-height(center,1.7);
+  color: $grayish-blue;
+  font-size: .95rem;
+}
+%back-blue{
+  content: "";
+  position: absolute;
+  background-color: $soft-blue;
+  bottom: 0;
+  z-index: -1;
+}

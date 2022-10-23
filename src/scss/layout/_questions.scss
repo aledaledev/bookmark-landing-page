@@ -1,0 +1,87 @@
+@use "../variables" as *;
+@use "../helpers" as *;
+.questions {
+  article {
+    padding: 3.2rem 2rem 1rem;
+    h2 {
+      @extend %h2;
+    }
+    p {
+      @extend %p-description;
+      margin: 1rem auto;
+      max-width: 28rem;
+    }
+  }
+  .asked-questions {
+    padding: 1rem 2rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    details {
+      color: $grayish-blue;
+      line-height: 2;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      max-height: 10rem;
+      overflow: hidden;
+      summary {
+        @extend %flex-center-between;
+        border-bottom: 1px solid rgb(230, 228, 228);
+        padding: 1.25rem 0 1rem;
+        font-size: 15px;
+        color: $very-dark-blue;
+        img {
+          transition: all 0.2s;
+          filter: invert(40%) sepia(20%) saturate(6939%) hue-rotate(218deg)
+            brightness(92%) contrast(89%);
+        }
+      }
+    }
+    details:first-child {
+      summary {
+        border-top: 1px solid rgb(230, 228, 228);
+      }
+    }
+    [open] {
+      summary {
+        border: none;
+        margin-bottom: 0.9rem;
+        img {
+          transform: rotate(180deg);
+          filter: invert(46%) sepia(94%) saturate(1503%) hue-rotate(326deg)
+            brightness(97%) contrast(104%);
+        }
+      }
+      max-height: 20rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgb(230, 228, 228);
+    }
+    .button-info {
+      background-color: $soft-blue;
+      padding: 1rem 1.6rem;
+      display: block;
+      color: white;
+      margin: 3rem auto 6.8rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .asked-questions {
+      details {
+        summary {
+          img {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    article {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

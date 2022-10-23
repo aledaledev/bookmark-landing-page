@@ -1,0 +1,131 @@
+@use "../helpers" as *;
+@use "../mixins" as *;
+@use "../variables" as *;
+.hero {
+  padding: 1.6rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 16.6rem;
+    &::before {
+      @extend %back-blue;
+      right: 0;
+      @include box-size(19rem, 13rem);
+      border-bottom-left-radius: 115px;
+    }
+    img {
+      @include box-size(93%, 16rem);
+    }
+  }
+
+  article {
+    padding: 3.2rem 2rem;
+    h1 {
+      @include aling-height(center, 1.4);
+      text-transform: capitalize;
+      @include font(1.75rem, 600, $very-dark-blue);
+    }
+    p {
+      @extend %p-description;
+      margin: 1rem auto;
+      max-width: 29rem;
+    }
+    .get-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      .button-chrome {
+        background-color: $soft-blue;
+        color: white;
+      }
+      .button-firefox {
+        background-color: rgb(248, 248, 248);
+        color: $very-dark-blue;
+      }
+    }
+  }
+  @media screen and (min-width: 500px) {
+    span {
+      height: 23.5rem;
+      width: 100%;
+      &::before {
+        width: 70%;
+        height: 18rem;
+      }
+      img {
+        height: 24rem;
+        max-width: 34rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    span {
+      width: 50%;
+      height: 19rem;
+      &::before {
+        height: 16rem;
+      }
+      img {
+        height: 19rem;
+        max-width: 34rem;
+      }
+    }
+    article {
+      width: 50%;
+      h1,
+      p {
+        margin-left: 0;
+        text-align: left;
+      }
+      .get-buttons {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    span {
+      height: 24rem;
+      img {
+        height: 24rem;
+      }
+      &::before {
+        height: 17rem;
+      }
+    }
+    article {
+      max-width: 30rem;
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 2.5rem;
+    article {
+      margin-right: 5rem;
+      padding-left: 0;
+      h1{
+        font-size: 2.7rem;
+      }
+    }
+    span {
+      height: 28rem;
+      img {
+        height: 29rem;
+        max-width: 40rem;
+      }
+      &::before {
+        height: 21rem;
+      }
+    }
+  }
+}

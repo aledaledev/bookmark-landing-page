@@ -1,0 +1,17 @@
+@mixin box-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin font ($size,$weight,$color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+@mixin spacing-transform ($spacing,$transform) {
+    letter-spacing: $spacing;
+    text-transform: $transform;
+}
+@mixin aling-height ($aling,$lh) {
+    text-align: $aling;
+    line-height: $lh;
+}
