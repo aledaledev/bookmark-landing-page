@@ -4,7 +4,7 @@ const Carousel = ({ props }) => {
   return (
     <div className="carousel">
       <span>
-        <img src="./src/assets/images/illustration-features-tab-1.svg" />
+        <img src="./public/images/illustration-features-tab-1.svg" />
       </span>
       <article>
         <h2>Bookmark in one click</h2>

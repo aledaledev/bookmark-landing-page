@@ -4,7 +4,7 @@ const Hero = () => {
   return (
       <section className='hero'>
         <span>
-          <img src='./src/assets/images/illustration-hero.svg' alt='hero'/>
+          <img src='./public/images/illustration-hero.svg' alt='hero'/>
         </span>
         <article>
           <h1>A simple Bookmark Manager</h1>

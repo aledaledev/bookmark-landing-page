@@ -3,8 +3,8 @@ import React from "react";
 const Header = ({showMenu, setShowMenu}) => {
   return (
     <header className="header">
-      <span><img src="./src/assets/images/logo-bookmark.svg" alt="bookmark" /></span>
-      <a id="hamburger" href="#blocking-body" onClick={e => setShowMenu(!showMenu)}><img src="./src/assets/images/icon-hamburger.svg" alt="menu"/></a>
+      <span><img src="./public/icons/logo-bookmark.svg" alt="bookmark" /></span>
+      <a id="hamburger" href="#blocking-body" onClick={e => setShowMenu(!showMenu)}><img src="./public/icons/icon-hamburger.svg" alt="menu"/></a>
       <nav className="principal-nav">
         <ul>
           <li><a href="#">features</a></li>
