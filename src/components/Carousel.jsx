@@ -1,18 +1,15 @@
 import React from "react";
 
-const Carousel = ({ props }) => {
+const Carousel = ({featureData}) => {
+  const {title , description, url} = featureData;
   return (
     <div className="carousel">
       <span>
-        <img src="./public/images/illustration-features-tab-1.svg" />
+        <img src={url} />
       </span>
       <article>
-        <h2>Bookmark in one click</h2>
-        <p>
-          Organize your bookmarks however you like. Our simple drag-and-drop
-          interface gives you complete control over how you manage your
-          favourite sites.
-        </p>
+        <h2>{title}</h2>
+        <p>{description}</p>
         <button className="info-button">more info</button>
       </article>
     </div>

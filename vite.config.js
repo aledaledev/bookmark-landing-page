@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:'/bookmark-landing-page/'
+  base:'/bookmark-landing-page/',
+  build: {
+    target: 'esnext'
+  }
 })

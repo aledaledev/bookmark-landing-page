@@ -12,10 +12,20 @@ import MenuMobile from "./components/MenuMobile"
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   document.body.id='blocking-body';
+  const [roll, setRoll] = useState("");
+
+  let initialPosition = window.scrollY;
+  const rollMenu = () => {
+    let actualPosition = window.scrollY;
+    initialPosition >= actualPosition? setRoll("roll-menu") : setRoll("");
+    initialPosition = actualPosition;
+  };
+  window.addEventListener("scroll", rollMenu);
+
   return (
     <div className="app">
-      {showMenu && <MenuMobile showMenu={showMenu} setShowMenu={setShowMenu}/>}
-      <Header showMenu={showMenu} setShowMenu={setShowMenu}/>
+      {showMenu && <MenuMobile showMenu={showMenu} setShowMenu={setShowMenu} rollMenu={rollMenu}/>}
+      <Header showMenu={showMenu} setShowMenu={setShowMenu} roll={roll} setRoll={setRoll} />
       <Hero/>
       <Features/>
       <Download/>

@@ -3,6 +3,7 @@
 @use "../mixins" as *;
 .contact {
     background-color: $soft-blue;
+    margin-top: 7.4rem;
     padding: 3.8rem 2rem 3.6rem;
     p {
       @include spacing-transform(0.3rem, uppercase);
@@ -45,7 +46,7 @@
           border-radius: 0.2rem 0.2rem 0 0;
           border: 2px solid $soft-red;
 
-          background-image: url("../../../public/icons/icon-error.svg");
+          background-image: url("../icons/icon-error.svg");
           background-repeat: no-repeat;
           background-position: 95%;
         }

@@ -1,13 +1,14 @@
 import React from "react";
 
-const Card = ({ props }) => {
+const Card = ({ downloadData }) => {
+  const {navegator,version, url} = downloadData
   return (
     <div className="card">
-      <img src="./src/assets/images/logo-chrome.svg" alt="Chrome" />
+      <img src={url} alt={navegator} />
       <article>
-        <h3>Add to Chrome</h3>
-        <p>Minimum version 62</p>
-        <img src='./src/assets/images/bg-dots.svg' alt="dots"/>
+        <h3>Add to {navegator}</h3>
+        <p>Minimum version {version}</p>
+        <img src='./images/bg-dots.svg' alt="dots"/>
         <button className="button-install">Add & install Extension</button>
       </article>
     </div>

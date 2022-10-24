@@ -1,15 +1,23 @@
 import React from "react";
 
-const Header = ({showMenu, setShowMenu}) => {
+const Header = ({ showMenu, setShowMenu, roll}) => {
+
   return (
-    <header className="header">
-      <span><img src="./public/icons/logo-bookmark.svg" alt="bookmark" /></span>
-      <a id="hamburger" href="#blocking-body" onClick={e => setShowMenu(!showMenu)}><img src="./public/icons/icon-hamburger.svg" alt="menu"/></a>
+    <header className={`header ${roll}`}>
+      <span>
+        <img src="./icons/logo-bookmark.svg" alt="bookmark" />
+      </span>
+      <a
+        id="hamburger"
+        onClick={() => {setShowMenu(!showMenu)}}
+      >
+        <img src="./icons/icon-hamburger.svg" alt="menu" />
+      </a>
       <nav className="principal-nav">
         <ul>
-          <li><a href="#">features</a></li>
-          <li><a href="#">pricing</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#features">features</a></li>
+          <li><a href="#pricing">pricing</a></li>
+          <li><a href="#contact">contact</a></li>
           <li><button>login</button></li>
         </ul>
       </nav>
