@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "navegator":"Chrome",
+        "version":"62",
+        "url":"./icons/logo-chrome.svg"
+    },
+    {
+        "id":2,
+        "navegator":"Firefox",
+        "version":"55",
+        "url":"./icons/logo-firefox.svg"
+    },
+    {
+        "id":3,
+        "navegator":"Opera",
+        "version":"46",
+        "url":"./icons/logo-opera.svg"
+    }
+]
