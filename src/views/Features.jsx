@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import getFeaturesData from "../helpers/getFeaturesData"
 
@@ -20,10 +20,10 @@ const Features = () => {
       </article>
 
       <div className="carousel-container">
-        <ul className="options">
-          <li><a onClick={() => setFeature(0)}>Simple Bookmarking</a></li>
-          <li><a onClick={() => setFeature(1)}>Speedy Searching</a></li>
-          <li><a onClick={() => setFeature(2)}>Easy Sharing</a></li>
+        <ul className="options">                                                                                  
+          <li><a onClick={() => setFeature(0)}>Simple Bookmarking<span className={`deco ${feature===0?"bg-soft-red":""}`}></span></a></li>
+          <li><a onClick={() => setFeature(1)}>Speedy Searching<span className={`deco ${feature===1?"bg-soft-red":""}`}></span></a></li>
+          <li><a onClick={() => setFeature(2)}>Easy Sharing<span className={`deco ${feature===2?"bg-soft-red":""}`}></span></a></li>
         </ul>
         <Carousel featureData = {getFeatures[feature]}/>
       </div>

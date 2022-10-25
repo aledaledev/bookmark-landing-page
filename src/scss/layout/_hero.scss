@@ -40,10 +40,25 @@
       .button-chrome {
         background-color: $soft-blue;
         color: white;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        &:hover {
+          color: $soft-blue;
+          background-color: white;
+          border-color: $soft-blue;
+        }
       }
       .button-firefox {
         background-color: rgb(248, 248, 248);
         color: $very-dark-blue;
+
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        &:hover {
+          color: $very-dark-blue;
+          background-color: white;
+          border-color:$very-dark-blue;
+        }
       }
     }
   }
@@ -113,7 +128,7 @@
     article {
       margin-right: 5rem;
       padding-left: 0;
-      h1{
+      h1 {
         font-size: 2.7rem;
       }
     }

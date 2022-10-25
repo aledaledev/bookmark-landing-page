@@ -30,10 +30,14 @@
         padding: 1.25rem 0 1rem;
         font-size: 15px;
         color: $very-dark-blue;
+        transition: color .2s;
         img {
           transition: all 0.2s;
           filter: invert(40%) sepia(20%) saturate(6939%) hue-rotate(218deg)
             brightness(92%) contrast(89%);
+        }
+        &:hover{
+          color: $soft-red;
         }
       }
     }

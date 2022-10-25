@@ -34,20 +34,17 @@
           width: 100%;
           color: $grayish-blue;
           font-size: 1rem;
-          &:after {
-            content: "";
+          .deco {
             display: block;
             margin: 0 auto;
             justify-self: end;
-            background-color: transparent;
             @include box-size(42%, 0.3rem);
             transition: all 0.2s ease;
             border-radius: 5px;
           }
           &:hover {
-            &:after {
-              background-color: $soft-red;
-            }
+            color: $soft-red;
+            cursor: pointer;
           }
         }
       }
@@ -61,7 +58,7 @@
           border: none;
           width: 33.3%;
           a {
-            &:after {
+            .deco {
               width: 100%;
             }
           }
@@ -84,6 +81,7 @@
           max-width: 35rem;
           @include box-size(85%, 13.1rem);
           border-bottom-right-radius: 115px;
+          border-top-right-radius: 115px;
           left: 0;
         }
         img {
@@ -128,8 +126,7 @@
         align-items: center;
         gap: 3rem;
         span {
-          width: 50%;
-          height: 17rem;
+          @include box-size(50%, 17rem);
           margin-top: 1rem;
           img {
             @include box-size(21rem, 14rem);
@@ -185,4 +182,7 @@
       }
     }
   }
+}
+.bg-soft-red {
+  background-color: $soft-red;
 }

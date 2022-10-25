@@ -9,6 +9,7 @@
   > img {
     margin: 3rem 0 2rem;
     width: 6.5rem;
+    height: 6.4rem;
   }
   article {
     h3 {
@@ -32,6 +33,13 @@
       color: white;
       margin: 1.4rem 0 1.5rem;
       padding: 1rem 2.5rem;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      &:hover {
+        color: $soft-blue;
+        background-color: white;
+        border-color: $soft-blue;
+      }
     }
   }
 }
